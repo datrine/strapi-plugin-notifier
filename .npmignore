@@ -1,0 +1,6 @@
+admin/
+server/
+tsconfig.json
+.eslintrc
+.prettierrc
+node_modules/

@@ -1,0 +1,67 @@
+{
+  "name": "strapi-plugin-notifier",
+  "version": "1.0.0",
+  "description": "A highly configurable notification inbox plugin for the Strapi v5 admin panel",
+  "keywords": ["strapi", "strapi-plugin", "notifications", "inbox", "admin"],
+  "homepage": "https://github.com/datrine/strapi-plugin-notifier#readme",
+  "bugs": {
+    "url": "https://github.com/datrine/strapi-plugin-notifier/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datrine/strapi-plugin-notifier.git"
+  },
+  "license": "MIT",
+  "author": "datrine",
+  "type": "commonjs",
+  "exports": {
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/server/index.js",
+  "module": "./dist/server/index.mjs",
+  "source": "./server/src/index.ts",
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^5.2.6",
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/admin": "^5.0.0",
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "displayName": "Notifier",
+    "description": "A highly configurable notification inbox plugin for the Strapi v5 admin panel"
+  }
+}

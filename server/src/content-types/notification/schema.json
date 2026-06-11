@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifier_notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "Notification",
+    "description": "Admin-panel notifications managed by strapi-plugin-notifier"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": { "visible": false },
+    "content-type-builder": { "visible": false }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["info", "success", "warning", "error"],
+      "default": "info"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "recipientId": {
+      "type": "integer"
+    },
+    "recipientRole": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "extends": "@strapi/sdk-plugin/tsconfig.json"
+}
