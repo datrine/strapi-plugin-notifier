@@ -2,7 +2,13 @@
   "name": "strapi-plugin-notifier",
   "version": "1.0.0",
   "description": "A highly configurable notification inbox plugin for the Strapi v5 admin panel",
-  "keywords": ["strapi", "strapi-plugin", "notifications", "inbox", "admin"],
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "notifications",
+    "inbox",
+    "admin"
+  ],
   "homepage": "https://github.com/datrine/strapi-plugin-notifier#readme",
   "bugs": {
     "url": "https://github.com/datrine/strapi-plugin-notifier/issues"
@@ -28,8 +34,6 @@
     "./package.json": "./package.json"
   },
   "main": "./dist/server/index.js",
-  "module": "./dist/server/index.mjs",
-  "source": "./server/src/index.ts",
   "scripts": {
     "build": "strapi-plugin build",
     "watch": "strapi-plugin watch",
@@ -37,7 +41,6 @@
     "verify": "strapi-plugin verify",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {},
   "devDependencies": {
     "@strapi/sdk-plugin": "^5.2.6",
     "@strapi/strapi": "^5.0.0",
@@ -59,6 +62,8 @@
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
+  "module": "./dist/server/index.mjs",
+  "source": "./server/src/index.ts",
   "strapi": {
     "kind": "plugin",
     "displayName": "Notifier",
